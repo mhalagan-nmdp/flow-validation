@@ -23,6 +23,7 @@
 */
 params.expected    = "${baseDir}/tutorial/output/ex00_ngsp_expected.xml"
 params.finalDir    = "${baseDir}/tutorial"
+params.outputDir   = "${baseDir}"
 params.experiment  = "ex00"
 params.resolution  = 2
 
@@ -56,7 +57,7 @@ process validationReport{
 		file validated_file
 
 	"""
-		ngs-validation-report -e ${params.expected} -o ${observed_file} -l ${validated_file} -p ${params.finalDir} -f 1 -v 1 
+		ngs-validation-report -e ${params.expected} -o ${observed_file} -l ${validated_file} -p ${params.outputDir} -f 1 -v 1 
   """
 }
 
